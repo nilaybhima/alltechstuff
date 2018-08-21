@@ -27,7 +27,7 @@ teaser                   : # path of fallback teaser image, e.g. "/assets/images
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               :  "google-plus" # false (default), "disqus", "discourse","google-plus", "facebook", "staticman", "staticman_v2" "custom"
+  provider               :  "disqus" # false (default), "disqus", "discourse","google-plus", "facebook", "staticman", "staticman_v2" "custom"
   disqus:
     shortname            : "nilay_bhima" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -105,7 +105,7 @@ author:
   bio              : "I am a devops enthusiast helping organisations to adopt and introduce new DevOps processes, change in culture, automation and scalability. I love everything automation."
   location         : "Auckland, New Zealand"
   email            : "nilaybhima2006@yahoo.co.uk"
-  uri              : #
+  uri              : "https://alltechstuff.xyz/"
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
   codepen          :
@@ -276,4 +276,3 @@ defaults:
     values:
       layout: single
       author_profile: true
-theme: jekyll-theme-cayman
