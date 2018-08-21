@@ -9,12 +9,12 @@ I come from a very diverse IT technological background. I have held positions fr
 
 The key tasks that I undertake currently are:
 
-•	Continuous Integration / Continuous Deployment
-•	Helping to adopt DevOps Practices
-•	Integration and API Management
-•	Azure Cloud implementation and Migration
-•	Scripting and Automation
-•	Software Development
-•	VSTS
+* Continuous Integration / Continuous Deployment
+* Helping to adopt DevOps Practices
+* Integration and API Management
+* Azure Cloud implementation and Migration
+* Scripting and Automation
+* Software Development
+* VSTS
 
 I am a Cisco Certified Network Associate and I hold a CompTIA A+ Certificate. I am currently completing my MCSD certification specialising in DevOps and Software Development.
