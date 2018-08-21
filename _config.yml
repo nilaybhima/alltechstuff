@@ -105,7 +105,7 @@ author:
   bio              : "I am a devops enthusiast helping organisations to adopt and introduce new DevOps processes, change in culture, automation and scalability. I love everything automation."
   location         : "Auckland, New Zealand"
   email            : "nilaybhima2006@yahoo.co.uk"
-  uri              : "www.alltechstuff.xyz"
+  uri              : #
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
   codepen          :
