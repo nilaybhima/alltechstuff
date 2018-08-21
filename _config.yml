@@ -10,9 +10,9 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-# theme                  : "minimal-mistakes-jekyll"
+theme                    : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "mint" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
@@ -27,9 +27,9 @@ teaser                   : # path of fallback teaser image, e.g. "/assets/images
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : "google-plus"
+  provider               :  "disqus", "google-plus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2" "custom"
   disqus:
-    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : "nilay_bhima" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -38,14 +38,14 @@ comments:
     num_posts            : # 5 (default)
     colorscheme          : "dark"
 staticman:
-  allowedFields          : 'name', 'email', 'url', 'message'
+  allowedFields          : # ['name', 'email', 'url', 'message']
   branch                 : # "master"
   commitMessage          : # "New comment by {fields.name}"
   filename               : # comment-{@timestamp}
   format                 : # "yml"
   moderation             : # true
   path                   : # "/_data/comments/{options.slug}" (default)
-  requiredFields         : 'name', 'email', 'message'
+  requiredFields         :  # ['name', 'email', 'message']
   transforms:
     email                : # "md5"
   generatedFields:
@@ -92,10 +92,10 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  provider               : google # false (default), "google", "google-universal", "custom"
   google:
     tracking_id          :
-    anonymize_ip         : # true, false (default)
+    anonymize_ip         : true # false (default)
 
 
 # Site Author
@@ -105,7 +105,7 @@ author:
   bio              : "I am a devops enthusiast helping organisations to adopt and introduce new DevOps processes, change in culture, automation and scalability. I love everything automation."
   location         : "Auckland, New Zealand"
   email            : "nilaybhima2006@yahoo.co.uk"
-  uri              :
+  uri              : "www.alltechstuff.xyz"
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
   codepen          :
@@ -113,7 +113,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : nilaybhima
+  github           : "nilaybhima"
   gitlab           :
   google_plus      :
   keybase          :
@@ -266,8 +266,13 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
-
-theme: jekyll-theme-cayman
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
