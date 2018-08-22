@@ -14,9 +14,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 lang: en-US
-title: All Tech Stuff!
+title: Articles on DevOps, VSTS, Azure and .NET
 email: nilaybhima2006@yahoo.co.uk
-description: Articles on DevOps, VSTS, Azure and .NET
+description: All Tech Stuff!
 baseurl: # the optional subpath of your site, e.g. "/blog"
 url: https://alltechstuff.xyz
 author:
