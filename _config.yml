@@ -34,6 +34,7 @@ algolia:
   index_name: # YOUR_INDEX_NAME
   search_only_api_key: # YOUR_SEARCH_ONLY_API_KEY
   powered_by: # true (default), false
+google_analytics: UA-124415334-1
 
 #Theme
 remote_theme: "mmistakes/jekyll-theme-basically-basic"
