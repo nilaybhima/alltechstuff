@@ -39,6 +39,7 @@ algolia:
 remote_theme: "mmistakes/jekyll-theme-basically-basic"
 
 # Build settings
+encoding: UTF-8
 markdown: kramdown
 plugins: # previsously gems
   - jekyll-feed
