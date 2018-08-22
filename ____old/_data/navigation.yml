@@ -2,6 +2,8 @@
 main:
   - title: "About"
     url: https://alltechstuff.xyz/about/
+  - title: "Home"
+    url: https://alltechstuff.xyz/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
@@ -11,5 +13,3 @@ main:
   # - title: "Sitemap"
   #   url: /sitemap/
 
- - title: "Home"
-    url: https://alltechstuff.xyz/
