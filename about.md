@@ -1,14 +1,18 @@
 ---
-title: "About"
+title: "About Me"
 layout: about
 ---
 
-Basically Basic is a [Jekyll theme](https://jekyllrb.com/docs/themes/) meant as a substitute for the default --- [Minima](https://github.com/jekyll/minima). Conventions and features found there are fully supported by **Basically Basic**, with a few enhancements thrown in for good measure:
+I come from a very diverse IT technological background. As a DevOps Specialist at Equinox IT, I currently help large organisations with DevOps adoption and practices for reducing SDLC's, feedback loops and to accelerate product delivery. I also providing consulting services for VSTS, Proper Code Management and DevOps tools. I am passionate about everything automation.
 
-- Clean responsive design with [six customizable skins](#skin)
-- Curriculum Vitæ/Resume layout powered by [JSON data](http://registry.jsonresume.org/)
-- About page layout
-- Disqus Comments and Google Analytics support
-- SEO best practices via [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag/)
+The key tasks that I undertake currently are:
 
-You can find the source code for this theme at: {% include icon-github.html username="mmistakes" %}/[jekyll-theme-basically-basic](https://github.com/mmistakes/jekyll-theme-basically-basic)
+* Continuous Integration / Continuous Deployment
+* Helping to adopt DevOps Practices
+* Integration and API Management
+* Azure Cloud implementation and Migration
+* Scripting and Automation
+* Software Development
+* VSTS
+
+I am a Cisco Certified Network Associate and I hold a CompTIA A+ Certificate. I am currently completing my MCSD certification specialising in DevOps and Software Development.
