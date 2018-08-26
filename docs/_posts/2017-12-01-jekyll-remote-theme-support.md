@@ -2,7 +2,7 @@
 title: "Jekyll Remote Theme Support Added"
 excerpt:
 last_modified_at: 2017-12-01T09:51:16-05:00
-tags: 
+tags:
   - Jekyll
 ---
 
