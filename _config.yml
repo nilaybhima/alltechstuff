@@ -51,7 +51,7 @@ feed:
   path: atom.xml
 
 # Pagination - https://jekyllrb.com/docs/pagination/
-paginate: 5
+paginate: 10
 paginate_path: /page:num/
 
 # Exclude from processing.
@@ -90,13 +90,6 @@ defaults:
   - scope:
       path: "_posts"
       type: posts
-    values:
-      layout: post
-      read_time: true
-  # _recipes
-  - scope:
-      path: "_recipes"
-      type: recipes
     values:
       layout: post
       read_time: true
