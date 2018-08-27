@@ -7,7 +7,7 @@ tags:
   - VSTS
   - Azure
   - ARM Templates
-last_modified_at: 2018-08-27T14:25:52-05:00
+last_modified_at: 2018-08-27
 read_time: true
 ---
 
