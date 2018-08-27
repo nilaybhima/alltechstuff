@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 lang: en-US
 title: "alltechstuff: Articles on DevOps, Open Source Tech, VSTS and Azure"
-main-title: "Articles on DevOps, Open Source Tech, VSTS and Azure"
+main_title: "Articles on DevOps, Open Source Tech, VSTS and Azure"
 email: nilaybhima2006@yahoo.co.uk
 description: All Tech Stuff!
 baseurl: # the optional subpath of your site, e.g. "/blog"

@@ -6,13 +6,13 @@
     {% endunless %}
     {% assign intro_image = intro_image | escape %}
     <div class="intro-image">
-      <img src="{{ intro_image }}" alt="{{ page.title }}">
+      <img src="{{ intro_image }}" alt="{{ page.main_title }}">
     </div>
   {% endif %}
 
   <div class="inner">
     <div class="intro-text">
-      <h1 id="page-title" class="intro-title">{{ page.alt_title | default: page.main-title | default: site.main-title | markdownify | strip_html }}</h1>
+      <h1 id="page-title" class="intro-title">{{ page.alt_title | default: page.main_title | default: site.main_title | markdownify | strip_html }}</h1>
       {% if page.sub_title %}
         <p class="intro-subtitle">{{ page.sub_title | markdownify | strip_html }}</p>
       {% endif %}
