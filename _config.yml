@@ -27,7 +27,7 @@ twitter_username:
 github_username: nilaybhima
 logo: "/assets/images/bio_photo.png"
 disqus:
-  shortname: nilaybhima
+  shortname: alltechstuff
 search: true
 search_full_content: true
 search_provider: lunr
