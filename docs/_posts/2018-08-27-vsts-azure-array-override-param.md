@@ -1,5 +1,5 @@
 ---
-title: "Passing an array of strings in the override template parameters in VSTS"
+title: "Passing an array of strings via the override template parameters in VSTS"
 categories:
   - VSTS
   - Azure
