@@ -1,5 +1,5 @@
 ---
-title: "Passing an array of Strings in the override template parameters in VSTS"
+title: "Passing an array of strings in the override template parameters in VSTS"
 categories:
   - VSTS
   - Azure
@@ -11,7 +11,7 @@ last_modified_at: 2018-08-27T14:25:52-05:00
 read_time: true
 ---
 
-Recently, I wanted to deploy an Azure App Service along with different slots from a VSTS Release Definition.
+Recently, I wanted to deploy an Azure App Service along with different slots via a VSTS Release Definition.
 
 For this, I had to override an Array parameter that accepted slot names in the ARM template using the Azure Resource Group Deployment Task.
 
