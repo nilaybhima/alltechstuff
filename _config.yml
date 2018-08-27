@@ -27,7 +27,7 @@ twitter_username:
 github_username: nilaybhima
 logo: "/assets/images/bio_photo.png"
 disqus:
-  shortname: nilay_bhima
+  shortname: nilaybhima
 search: true
 search_full_content: true
 search_provider: lunr
@@ -74,7 +74,7 @@ exclude:
 #  - .editorconfig
 #  - .gitattributes
 #  - .jekyll-assets-cache
-#  - .sass-cache
+   - .sass-cache
 #  - .scss-lint.yml
 #  - CHANGELOG
 #  - Gemfile
