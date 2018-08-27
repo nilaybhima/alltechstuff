@@ -1,13 +1,13 @@
 {% if post.id %}
-  {% assign title = post.title | markdownify | strip_html %}
+  {% assign title = post.main-title | markdownify | strip_html %}
 {% else %}
-  {% assign title = post.title %}
+  {% assign title = post.main-title %}
 {% endif %}
 
 <article class="entry">
   <header class="entry-header">
     <h3 class="entry-title">
-      <a href="{{ post.url | relative_url }}" rel="bookmark">{{ title }}</a>
+      <a href="{{ post.url | relative_url }}" rel="bookmark">{{ main-title }}</a>
     </h3>
     {% if post.image.thumbnail %}
       {% assign entry_image = post.image.thumbnail %}
