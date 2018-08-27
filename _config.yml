@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 lang: en-US
-title: Articles on DevOps, VSTS, Azure and .NET
+title: "alltechstuff: Articles on DevOps, Open Source Tech, VSTS and Azure"
 email: nilaybhima2006@yahoo.co.uk
 description: All Tech Stuff!
 baseurl: # the optional subpath of your site, e.g. "/blog"
@@ -35,7 +35,8 @@ algolia:
   search_only_api_key: # YOUR_SEARCH_ONLY_API_KEY
   powered_by: # true (default), false
 google_analytics: UA-124415334-1
-
+disqus:
+  shortname: nilay_bhima
 #Theme
 remote_theme: "mmistakes/jekyll-theme-basically-basic"
 
