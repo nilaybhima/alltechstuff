@@ -26,23 +26,23 @@ author:
 twitter_username:
 github_username: nilaybhima
 logo: "/assets/images/bio_photo.png"
-search: true
-search_full_content: true
-search_provider: # lunr (default), algolia
-algolia:
-  application_id: # YOUR_APPLICATION_ID
-  index_name: # YOUR_INDEX_NAME
-  search_only_api_key: # YOUR_SEARCH_ONLY_API_KEY
-  powered_by: # true (default), false
-google_analytics: UA-124415334-1
 disqus:
   shortname: nilay_bhima
+search: true
+search_full_content: true
+search_provider: lunr
+google_analytics: UA-124415334-1
+
 #Theme
 remote_theme: "mmistakes/jekyll-theme-basically-basic"
 
 # Build settings
 encoding: UTF-8
 markdown: kramdown
+highlighter: rouge
+lsi: false
+incremental: false
+
 plugins: # previsously gems
   - jekyll-feed
   - jekyll-seo-tag
@@ -50,6 +50,17 @@ plugins: # previsously gems
   - jekyll-paginate
 feed:
   path: atom.xml
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+enable_coderay: false
 
 # Pagination - https://jekyllrb.com/docs/pagination/
 paginate: 10
