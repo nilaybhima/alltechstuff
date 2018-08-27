@@ -8,7 +8,7 @@ last_modified_at: 2018-08-27
 read_time: true
 ---
 
-Recently, I had an opportunity to work for an enterprise organisation to setup a VSTS build agent on an on-prem server for achieving Continuos Integration and Continuous Delivery for their on-premise code base.
+Recently, I had the opportunity to work for an enterprise organisation to setup a VSTS build agent on an on-prem server for achieving Continuos Integration and Continuous Delivery for their on-premise code base.
 
 Although there as some article out there for achieving this, I thought of jotting down some important points which I had trouble with during this phase and some which were hard to look for on the web.
 
@@ -55,4 +55,11 @@ git config --global http.proxy http://:$(ProxyPassword)@$(ProxyUrl)
 choco config set proxy $(ProxyUrl)
 choco config set proxyUser $(ProxyUsername)
 choco config set proxyPassword $(ProxyPassword)
+```
+
+* curl
+
+```yaml
+#Use the proxy flags for each curl request
+curl --proxy-user "$(ProxyUserName):$(ProxyPassword)" -x $(ProxyUrl)
 ```

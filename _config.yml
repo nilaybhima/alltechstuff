@@ -25,7 +25,7 @@ author:
   picture:
 twitter_username:
 github_username: nilaybhima
-logo: "/assets/icons/bio-photo.svg"
+logo: "/assets/images/bio_photo.png"
 search: true
 search_full_content: true
 search_provider: # lunr (default), algolia
