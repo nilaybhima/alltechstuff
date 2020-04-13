@@ -32,7 +32,7 @@ The GIT Repository will have all the infrastructure templates source controlled.
 
 The first step is to reference your existing GIT Repository as an artifact in your CD Pipeline. In this case, you need to reference the GIT Repository that has all the DSC Configuration files source controlled.
 
-You can then provision an Azure Storage Account with a container that can hold the DSC Packages. The snippet below is a resource for an ARM Template that provisions an storage account:
+You can then provision an Azure Storage Account with a container that can hold the DSC Packages. The snippet below is a resource for an ARM Template that provisions a storage account:
 
 ```yaml
 {
@@ -81,7 +81,7 @@ $token = New-AzStorageAccountSASToken -Context $context -Service "Blob" -Resourc
 Write-Host "##vso[task.setvariable variable=sasToken;issecret=true]$token"
 ```
 
-The sasToken variable secret can then be referenced into your ARM Template. The snippet below shows how you can use the Micorosft.PowerShell DSC Property with the "Microsoft.Compute/virtualMachines/extensions" endpoint. The snippet registers a VM to a Host Pool for Azure WVD:
+The sasToken variable secret can then be referenced into your ARM Template via a parameter. The snippet below shows how you can use the Micorosft.PowerShell DSC Property with the "Microsoft.Compute/virtualMachines/extensions" endpoint. The snippet registers a VM to a Host Pool for Azure WVD:
 
 ```yaml
 {
@@ -124,6 +124,12 @@ The sasToken variable secret can then be referenced into your ARM Template. The 
         },
     },
 }
+```
+
+Once the above job is done, the storage account can then be removed:
+
+```yaml
+Remove-AzStorageAccount -ResourceGroupName "$(resourceGroupName)" -AccountName "$(storageAccountName)"
 ```
 
 Here is how the pipeline steps look like:
