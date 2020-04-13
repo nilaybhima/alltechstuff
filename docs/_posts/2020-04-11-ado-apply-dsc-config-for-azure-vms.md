@@ -67,7 +67,7 @@ $parameters =@{
 'StorageAccountName' = '$(storageAccountName)'
 }
 
-Publish-AzRmVMDscConfiguration @parameters -force - Verbose
+Publish-AzRmVMDscConfiguration @parameters -force -Verbose
 ```
 
 You can then deploy the ARM Template with the DSC PowerShell Extension but first, it will require a SAS Token to access the storage account. There are a few ways to achieve this: One is to obtain a SAS Token within the ARM Template. However, there is a bug currently which can be seen [here](https://github.com/MicrosoftDocs/azure-docs/issues/15061). Another way would be to use PowerShell to get a SAS Token as in the snippet below:
