@@ -16,5 +16,6 @@ The key tasks that I undertake currently are:
 * Scripting and Automation
 * Software Development
 * Azure DevOps
+* Training and Mentoring
 
 I am a Cisco Certified Network Associate and I hold a CompTIA A+ Certificate. I am currently completing my Microsoft Cloud Software Development certifications specialising in Cloud, DevOps and Software Development.
