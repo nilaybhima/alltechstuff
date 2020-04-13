@@ -18,7 +18,7 @@ Applying DSC Configuration through a local machine usually involves establishing
 
 ## The ARM PowerShell Extension
 
-This is an endpoint available on the Azure Resource Manager that pushes a DSC Configuration onto your Azure Virtual Machine. Here is a quick link that gives you all the information regarding the endpoint [here](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/dsc-windows).
+This is an endpoint available on the Azure Resource Manager that pushes a DSC Configuration onto your Azure Virtual Machine. Here is a quick link that gives you all the information regarding the endpoint - [click here](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/dsc-windows).
 
 ## How Its Done
 
