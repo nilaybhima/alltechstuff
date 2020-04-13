@@ -3,7 +3,7 @@ title: "About"
 layout: about
 ---
 
-alltechstuff © 2018 is an initiative to share hands on Knowledge in the IT Industry.
+alltechstuff © 2018 is an initiative to share hands-on Knowledge in the IT Industry.
 
 As a Consultant at Equinox IT, I currently help organisations with DevOps adoption to accelerate product delivery. My major focus is in Software Development, Azure, Azure DevOps, Security, Proper Code Management, APIs, PAAS, SAAS, Containerisation and Orchestration, automation and DevOps tools. I am passionate about everything automation.
 
