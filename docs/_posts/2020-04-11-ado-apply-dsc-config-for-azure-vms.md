@@ -18,7 +18,7 @@ Applying DSC Configuration through a local machine usually involves establishing
 
 ## The ARM PowerShell Extension
 
-This is an endpoint available on the Azure Resource Manager that pushes a DSC Configuration onto your Azure Virtual Machine. Here is a quick link that gives you all the information regarding the endpoint: https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/dsc-windows.
+This is an endpoint available on the Azure Resource Manager that pushes a DSC Configuration onto your Azure Virtual Machine. Here is a quick link that gives you all the information regarding the endpoint [here](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/dsc-windows).
 
 ## How Its Done
 
@@ -70,7 +70,7 @@ $parameters =@{
 Publish-AzRmVMDscConfiguration @parameters -force - Verbose
 ```
 
-The next step is deploy the ARM Template with the DSC PowerShell Extension but first, it will require a SAS Token for the Storage Account to access it. There are two ways to achieve this: One is to obtain a SAS Token within the ARM Template. However, there is a bug currently which can be see here: https://github.com/MicrosoftDocs/azure-docs/issues/15061. Another way would be to use PowerShell to get a SAS Token:
+The next step is deploy the ARM Template with the DSC PowerShell Extension but first, it will require a SAS Token for the Storage Account to access it. There are two ways to achieve this: One is to obtain a SAS Token within the ARM Template. However, there is a bug currently which can be seen [here](https://github.com/MicrosoftDocs/azure-docs/issues/15061). Another way would be to use PowerShell to get a SAS Token:
 
 ```yaml
 $context = (Get-AzStorageAccount -ResourceGroupName '$(resourceGroupName)' -AccountName '$(storageAccountName)').context
@@ -129,7 +129,7 @@ The sasToken variable secret can then be referenced into your ARM Template. The 
 Here is how the pipeline steps look like:
 
 <figure style="width: 1200px">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020_04_13_cd_pipeline_dsc_config" alt="">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020_04_13_cd_pipeline_dsc_config.png" alt="">
 </figure>
 
 ## Comments
