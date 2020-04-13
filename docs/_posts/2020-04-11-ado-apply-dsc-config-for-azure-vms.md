@@ -30,9 +30,9 @@ The GIT Repository will have all the infrastructure templates source controlled.
 
 ## The CD Pipeline
 
-1. The first step is to reference your existing GIT Repository as an artifact in your CD Pipeline. In this case, you need to reference the GIT Repository that has all the DSC Configuration files verisoned.
+The first step is to reference your existing GIT Repository as an artifact in your CD Pipeline. In this case, you need to reference the GIT Repository that has all the DSC Configuration files versioned.
 
-2. You can then provision an Azure Storage Account with a container that can hold the DSC Packages. In my case, I deployed a storage account using an ARM Template:
+You can then provision an Azure Storage Account with a container that can hold the DSC Packages. In my case, I deployed a storage account using an ARM Template:
 
 ```yaml
 {
@@ -58,7 +58,7 @@ The GIT Repository will have all the infrastructure templates source controlled.
 }
 ```
 
-3. The next step is to publish your DSC Configuration using the Publish-AzRmVMDscConfiguration command. This command can be used with the Azure PowerShell task of Azure DevOps so that you can use your existing service connection for Azure.
+The next step is to publish your DSC Configuration using the Publish-AzRmVMDscConfiguration command. This command can be used with the Azure PowerShell task of Azure DevOps so that you can use your existing service connection for Azure.
 
 ```yaml
 $parameters =@{
@@ -70,7 +70,7 @@ $parameters =@{
 Publish-AzRmVMDscConfiguration @parameters -force - Verbose
 ```
 
-4. The next step is deploy the ARM Template with the DSC PowerShell Extension but first, it will require a SAS Token for the Storage Account to access it. There are two ways to achieve this: One is to obtain a SAS Token within the ARM Template. However, there is a bug currently which can be see here: https://github.com/MicrosoftDocs/azure-docs/issues/15061. Another way would be to use PowerShell to get a SAS Token:
+The next step is deploy the ARM Template with the DSC PowerShell Extension but first, it will require a SAS Token for the Storage Account to access it. There are two ways to achieve this: One is to obtain a SAS Token within the ARM Template. However, there is a bug currently which can be see here: https://github.com/MicrosoftDocs/azure-docs/issues/15061. Another way would be to use PowerShell to get a SAS Token:
 
 ```yaml
 $context = (Get-AzStorageAccount -ResourceGroupName '$(resourceGroupName)' -AccountName '$(storageAccountName)').context
