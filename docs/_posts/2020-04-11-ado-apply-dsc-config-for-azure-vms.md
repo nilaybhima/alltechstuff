@@ -58,13 +58,14 @@ You can then provision an Azure Storage Account with a container that can hold t
 }
 ```
 
-The next step is to publish your DSC Configuration using the Publish-AzRmVMDscConfiguration command. This command can be used with the Azure PowerShell task of Azure DevOps so that you can use your existing service connection for Azure.
+The next step is to publish your DSC Configuration using the command Publish-AzVMDscConfiguration. This command packages your DSC Configuration script into a zip file and uploads it onto your storage account container. The Azure PowerShell task of Azure DevOps can be used to consume an existing service connection to Azure for Authentication.
 
 ```yaml
 $parameters =@{
 'configurationpath' = '$(System.DefaultWorkingDirectory)/scripts/configuration.ps1'
 'resourcegroupname' = '$(resourceGroupName)'
 'StorageAccountName' = '$(storageAccountName)'
+'ContainerName' = '$(containerName)'
 }
 
 Publish-AzRmVMDscConfiguration @parameters -force -Verbose
