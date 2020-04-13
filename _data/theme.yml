@@ -23,7 +23,7 @@ t:
   of: "of"
   min_read: "min read"
   present: "Present"
-  copyright: © 2018 alltechstuff
+  copyright_year: "2018"
 
 # Google Fonts
 google_fonts:
