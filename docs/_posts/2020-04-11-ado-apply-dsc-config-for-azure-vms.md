@@ -12,7 +12,7 @@ read_time: true
 
 ---
 
-There are a few ways to apply PowerShell DSC Configuration to Azure Virtual Machines. This article shows how to apply DSC Configuration to Azure VMs through Azure DevOps and encourages the concept of GitOps for a DevOps Team.
+There are a few ways to apply PowerShell DSC Configuration to Azure Virtual Machines running Windows. This article shows how to apply DSC Configuration to Azure VMs through Azure DevOps and encourages the concept of GitOps for a DevOps Team.
 
 Applying DSC Configuration through a local machine usually involves establishing a CIM Session with your VM and installing certificates from the Cloud Service where necessary. You can also use the Set-AzRmVMDscExtension to apply configuration to the Azure VM. Another way to apply DSC configuration would be to use an Azure Automation Account. This is a fantastic way to manage configuration for your Azure Virtual Machines but could be a longer process especially if you are trying to push DSC Configuration through tools like Azure DevOps. This article introduces the ARM PowerShell DSC Extension for Windows VMs and shows how to build a CD Pipeline for pushing your DSC Configuration to Azure Virtual Machines in the fastest yet efficient way possible.
 
@@ -26,13 +26,13 @@ The initial step is to package your DSC Configuration and to make it available o
 
 ## GitOps
 
-The GIT Repository will have all the infrastructure templates source controlled. This includes the ARM Templates, DSC Configuration files and any other scripts that would be involved in setting the desired state of your VMs. This implements the concept of GitOps where the declarative description of your Infrastructure is source-controlled, hence versioned and can be deployed through a CD Pipeline. This introduces several benefits like high velocity of deployment, faster recovery and more security over the deployed infrastructure. The model that we consider is the Push-Based Deployment for GitOps in this scenario.
+The GIT Repository will have all the infrastructure templates source controlled. This includes the ARM Templates, DSC Configuration files and any other scripts that would be involved in setting the desired state of your VMs. This implements the core concept of GitOps where the declarative description of your Infrastructure is source-controlled, hence versioned and can be deployed through a CD Pipeline. This introduces several benefits like high velocity of deployment, faster recovery and more security over the deployed infrastructure. The model that we consider is the Push-Based Deployment for GitOps in this scenario.
 
 ## The CD Pipeline
 
-The first step is to reference your existing GIT Repository as an artifact in your CD Pipeline. In this case, you need to reference the GIT Repository that has all the DSC Configuration files versioned.
+The first step is to reference your existing GIT Repository as an artifact in your CD Pipeline. In this case, you need to reference the GIT Repository that has all the DSC Configuration files source controlled.
 
-You can then provision an Azure Storage Account with a container that can hold the DSC Packages. In my case, I deployed a storage account using an ARM Template:
+You can then provision an Azure Storage Account with a container that can hold the DSC Packages. The snippet below is a resource for an ARM Template that provisions an storage account:
 
 ```yaml
 {
@@ -70,7 +70,7 @@ $parameters =@{
 Publish-AzRmVMDscConfiguration @parameters -force - Verbose
 ```
 
-The next step is deploy the ARM Template with the DSC PowerShell Extension but first, it will require a SAS Token for the Storage Account to access it. There are two ways to achieve this: One is to obtain a SAS Token within the ARM Template. However, there is a bug currently which can be seen [here](https://github.com/MicrosoftDocs/azure-docs/issues/15061). Another way would be to use PowerShell to get a SAS Token:
+You can then deploy the ARM Template with the DSC PowerShell Extension but first, it will require a SAS Token to access the storage account. There are a few ways to achieve this: One is to obtain a SAS Token within the ARM Template. However, there is a bug currently which can be seen [here](https://github.com/MicrosoftDocs/azure-docs/issues/15061). Another way would be to use PowerShell to get a SAS Token as in the snippet below:
 
 ```yaml
 $context = (Get-AzStorageAccount -ResourceGroupName '$(resourceGroupName)' -AccountName '$(storageAccountName)').context
@@ -81,7 +81,7 @@ $token = New-AzStorageAccountSASToken -Context $context -Service "Blob" -Resourc
 Write-Host "##vso[task.setvariable variable=sasToken;issecret=true]$token"
 ```
 
-The sasToken variable secret can then be referenced into your ARM Template. The snippet below shows how you can use the Micorosft.PowerShell DSC Property with the "Microsoft.Compute/virtualMachines/extensions" endpoint. In this case, the goal was to register a VM to a Host Pool for Azure WVD.
+The sasToken variable secret can then be referenced into your ARM Template. The snippet below shows how you can use the Micorosft.PowerShell DSC Property with the "Microsoft.Compute/virtualMachines/extensions" endpoint. The snippet registers a VM to a Host Pool for Azure WVD:
 
 ```yaml
 {
@@ -134,4 +134,4 @@ Here is how the pipeline steps look like:
 
 ## Comments
 
-This article focused on showing how to apply DSC Configuration through an Azure DevOps CD Pipeline. Whether it is traditional VMs or Kubernetes infrastructure, you can build, deploy and update your entire Infrastructure by implemeting GitOps in your Team and this is all possible through Azure DevOps!
+This article focused on showing how to apply DSC Configuration through an Azure DevOps CD Pipeline to an Azure Virtual Machine. Whether it is traditional VMs or Kubernetes infrastructure, you can build, deploy and update your entire Infrastructure by implemeting GitOps in your Team and this is all possible through Azure DevOps!
