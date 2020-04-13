@@ -14,9 +14,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 lang: en-US
-title: "alltechstuff: Articles on DevOps, Open Source Tech, VSTS and Azure"
-main_title: "Articles on DevOps, Open Source Tech, VSTS and Azure"
-email: nilaybhima2006@yahoo.co.uk
+title: "alltechstuff: Articles on DevOps, Open Source Tech, Azure and Azure DevOps"
+main_title: "Articles on DevOps, Open Source Tech, Azure and Azure DevOps"
+email: nilaybhima2012@gmail.com
 description: All Tech Stuff!
 baseurl: # the optional subpath of your site, e.g. "/blog"
 url: https://alltechstuff.xyz
