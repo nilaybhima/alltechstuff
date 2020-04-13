@@ -128,7 +128,7 @@ The sasToken variable secret can then be referenced into your ARM Template. The 
 
 Here is how the pipeline steps look like:
 
-<figure style="width: 600px">
+<figure style="width: 300px">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020_04_13_cd_pipeline_dsc_config.png" alt="">
 </figure>
 
